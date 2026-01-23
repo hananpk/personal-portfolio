@@ -1,5 +1,5 @@
 export const Assets = {
-  Logo: require("./images/logo.svg"),
+  Logo: require("./images/logo.png"),
   Spotlight_Image: require("../assets/images/spotlight.png"),
   Pen_Icon: require("../assets/images/pen-icon.png"),
   Code_Icon: require("../assets/images/code-icon.png"),

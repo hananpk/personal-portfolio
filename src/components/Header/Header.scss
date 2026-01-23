@@ -1,7 +1,7 @@
 @import "../../styles/utiltites.scss";
 
 header {
-  height: 100px;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -69,7 +69,6 @@ header {
     img {
       width: 70px;
       display: block;
-      filter: invert(1);
     }
   }
 }

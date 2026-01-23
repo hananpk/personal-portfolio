@@ -1,20 +1,36 @@
-import Header from "@/components/Header";
 import "./globals.css";
-import { Inter } from "next/font/google";
-import Head from "next/head";
+import localFont from "next/font/local";
 
-const inter = Inter({ subsets: ["latin"] });
+const zalandoSans = localFont({
+  src: [
+    {
+      path: "../../public/fonts/ZalandoSansExpanded-Light.woff2",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/ZalandoSansExpanded-Medium.woff2",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/ZalandoSansExpanded-Bold.woff2",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  display: "swap",
+});
+
 export const metadata = {
-  title: "Hanan.",
-  description: "Portfolio Webasite",
+  title: "Hanan",
+  description: "Frontend Engineer & UI/UX Designer Portfolio",
 };
 
 export default function RootLayout({ children }) {
   return (
-    <>
-      <html lang="en">
-        <body className={inter.className}>{children}</body>
-      </html>
-    </>
+    <html lang="en">
+      <body className={zalandoSans.className}>{children}</body>
+    </html>
   );
 }

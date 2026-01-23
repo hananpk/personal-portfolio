@@ -59,9 +59,41 @@
     }
 }
 
+@font-face {
+  font-family: "Zalando Sans Expanded";
+  src: url("/fonts/zalando/ZalandoSansExpanded-Bold.woff2") format("woff2"),
+       url("/fonts/zalando/ZalandoSansExpanded-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Zalando Sans Expanded";
+  src: url("/fonts/zalando/ZalandoSansExpanded-Light.woff2") format("woff2"),
+       url("/fonts/zalando/ZalandoSansExpanded-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Zalando Sans Expanded";
+  src: url("/fonts/zalando/ZalandoSansExpanded-Medium.woff2") format("woff2"),
+       url("/fonts/zalando/ZalandoSansExpanded-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+
 @layer utilities {
     .border-border {
         @apply border;
         /* Or other Tailwind utility classes */
     }
+}
+
+html {
+  font-family: "Zalando Sans Expanded", system-ui, sans-serif;
 }
