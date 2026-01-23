@@ -50,7 +50,7 @@ export const metadata = {
     siteName: "Hanan Portfolio",
     images: [
       {
-        url: "/og-image.png",
+        url: "https://hanaan.me/og-image.png",
         width: 1200,
         height: 630,
         alt: "Hanan Portfolio Preview",
