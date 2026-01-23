@@ -23,7 +23,10 @@ const WorkSection = () => {
   const [activeImage, setActiveImage] = useState(projects[0].image);
 
   return (
-    <section className="min-h-screen bg-black text-white p-8 md:p-24 ">
+    <section
+      id="work"
+      className="min-h-screen bg-black text-white p-8 md:p-24 "
+    >
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div className="space-y-12">
           <h2 className="text-sm uppercase tracking-[0.3em] text-gray-500 mb-8">
@@ -44,11 +47,11 @@ const WorkSection = () => {
                     <span className="text-xs text-blue-400 font-mono mb-2 block opacity-0 group-hover:opacity-100 transition-opacity">
                       0{project.id}
                     </span>
-                    <h3 className="text-4xl md:text-5xl font-light group-hover:italic transition-all">
+                    <h3 className="text-3xl md:text-5xl font-light group-hover:italic transition-all">
                       {project.title}
                     </h3>
                   </div>
-                  <span className="text-gray-500 text-sm mb-1 group-hover:text-white transition-colors">
+                  <span className="text-gray-500 text-sm font-thin mb-1 group-hover:text-white transition-colors">
                     {project.category}
                   </span>
                 </div>

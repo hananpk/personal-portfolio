@@ -96,4 +96,5 @@
 
 html {
   font-family: "Zalando Sans Expanded", system-ui, sans-serif;
+  scroll-behavior: smooth;
 }

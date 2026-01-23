@@ -1,4 +1,5 @@
 "use client";
+import Footer from "@/components/Footer";
 import Spotlight from "@/components/Spotlight";
 import WorkSection from "@/components/WorkSection";
 import { NextUIProvider } from "@nextui-org/react";
@@ -10,6 +11,7 @@ export default function Home() {
       <NextUIProvider>
         <Spotlight />
         <WorkSection />
+        <Footer />
       </NextUIProvider>
     </>
   );
