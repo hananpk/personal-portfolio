@@ -21,10 +21,57 @@ const zalandoSans = localFont({
   ],
   display: "swap",
 });
-
 export const metadata = {
-  title: "Hanan",
-  description: "Frontend Engineer & UI/UX Designer Portfolio",
+  title: {
+    default: "Hanan — Frontend Engineer & UI/UX Designer",
+    template: "%s | Hanan",
+  },
+  description:
+    "Creative Frontend Engineer and UI/UX Designer specializing in modern web experiences using React, Next.js, and design systems.",
+
+  keywords: [
+    "Hanan",
+    "Frontend Engineer",
+    "UI UX Designer",
+    "React Developer",
+    "Next.js Developer",
+    "Web Designer",
+    "Portfolio",
+  ],
+
+  authors: [{ name: "Hanan" }],
+  creator: "Hanan",
+
+  openGraph: {
+    title: "Hanan — Frontend Engineer & UI/UX Designer",
+    description:
+      "Explore Hanan’s portfolio showcasing modern web applications, UI/UX design, and interactive experiences.",
+    url: "https://hanaan.me",
+    siteName: "Hanan Portfolio",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Hanan Portfolio Preview",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Hanan — Frontend Engineer & UI/UX Designer",
+    description:
+      "Frontend Engineer crafting premium web experiences with React and Next.js.",
+    images: ["/og-image.png"],
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({ children }) {

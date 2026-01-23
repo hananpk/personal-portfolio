@@ -105,12 +105,12 @@ const Spotlight = () => {
             <h1 className="py-2 text-left block ">
               <SplitText
                 text="Hey!"
-                className="text-4xl md:text-6xl font-bold text-left text-white/60"
+                className="text-4xl md:text-6xl font-semibold text-left text-white/60"
               />
             </h1>
             <SplitText
               text="I'm Hanan"
-              className="text-4xl md:text-6xl font-semibold text-left text-white"
+              className="text-4xl md:text-6xl font-thin text-left text-white"
             />
 
             <p
