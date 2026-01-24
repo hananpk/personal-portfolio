@@ -22,7 +22,7 @@ const BookingSection = () => {
             Let&apos;s build something{" "}
             <span className="text-blue-500">extraordinary.</span>
           </h2>
-          <p className="text-gray-400 mb-8 max-w-md leading-relaxed font-thin">
+          <p className="text-gray-400 mb-8 max-w-md leading-relaxed font-thin md:text-md text-sm">
             Have a project in mind or just want to talk tech? Grab a spot on my
             calendar and let&apos;s make it happen.
           </p>
@@ -34,7 +34,7 @@ const BookingSection = () => {
           >
             <button
               onClick={() => setIsOpen(true)}
-              className="px-8 py-4 bg-white text-md font-semibold rounded-full hover:bg-blue-500 hover:text-white transition-all duration-300 shadow-lg"
+              className="px-8 py-4 bg-white text-sm md:text-md font-semibold rounded-full hover:bg-blue-500 hover:text-white transition-all duration-300 shadow-lg"
             >
               Schedule a 15-min Call
             </button>
@@ -42,7 +42,7 @@ const BookingSection = () => {
 
           <div className="mt-6 flex items-center space-x-2 text-xs text-zinc-500 uppercase tracking-widest">
             <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-            <span>Slots available this week</span>
+            <span className="text-xs">Slots available</span>
           </div>
         </div>
       </motion.div>

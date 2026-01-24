@@ -30,7 +30,7 @@ const StepContainer = () => {
             <h2 className="text-xs uppercase tracking-[0.6em] text-zinc-500 font-bold mb-4">
               Technical Layers
             </h2>
-            <p className="text-4xl md:text-4xl text-white font-bold tracking-tight leading-tight">
+            <p className="text-2xl md:text-4xl text-white font-bold tracking-tight leading-tight">
               How I <span className="text-blue-500">Build.</span>
             </p>
           </motion.div>

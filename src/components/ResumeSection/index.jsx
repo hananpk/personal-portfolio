@@ -22,7 +22,7 @@ const ResumeSection = () => {
               <FiFileText className="text-xl" />
               <span className="text-xs uppercase tracking-[0.3em] font-semibold">Resume</span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight">
+            <h2 className="text-2xl md:text-4xl font-bold text-white tracking-tight">
               Looking for the <span className="text-gray-400 italic">Full Picture?</span>
             </h2>
             <p className="text-gray-500 max-w-sm text-sm md:text-base leading-relaxed font-thin">
@@ -36,7 +36,7 @@ const ResumeSection = () => {
               download="Hanan_Resume.pdf"
               whileHover="hover"
               whileTap="tap"
-              className="relative z-10 flex items-center space-x-4 bg-white px-10 py-5 rounded-2xl text-black font-bold overflow-hidden"
+              className="relative z-10 flex items-center space-x-4 text-sm md:text-lg bg-white px-10 py-5 rounded-2xl text-black font-bold overflow-hidden"
             >
 
               <motion.div 
