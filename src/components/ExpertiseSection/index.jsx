@@ -40,7 +40,7 @@ const ExpertiseSection = () => {
       <div className="max-w-6xl mx-auto">
         <div className="mb-12">
           <h2 className="text-xs uppercase tracking-[0.4em] text-zinc-500 font-bold mb-2">Expertise</h2>
-          <p className="text-2xl font-bold text-white">Technical Specialized Skills</p>
+          <p className="text-2xl md:text-4xl font-bold text-white">Technical Specialized Skills</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
