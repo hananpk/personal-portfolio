@@ -5,7 +5,7 @@ import { Assets } from "@/assets";
 
 const Header = () => {
   return (
-    <header className="fixed top-0 left-0 w-full z-50 pointer-events-none">
+    <header className="absolute top-0 left-0 w-full z-50 pointer-events-none">
       <div className="max-w-7xl mx-auto px-8 py-8 flex justify-between items-center pointer-events-auto">
         <div className="group relative cursor-pointer">
           <div className="absolute -inset-2 bg-blue-500/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-all duration-700 group-hover:scale-150" />
