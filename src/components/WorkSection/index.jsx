@@ -25,7 +25,7 @@ const WorkSection = () => {
   return (
     <section
       id="work"
-      className="min-h-screen bg-black text-white p-8 md:p-24 "
+      className="md:min-h-screen bg-black text-white p-8 md:p-24 "
     >
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div className="space-y-12">
