@@ -52,7 +52,7 @@ const ExpertiseSection = () => {
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
               whileHover={{ y: -5 }}
-              className={`relative overflow-hidden group p-8 rounded-3xl border border-white/5 bg-zinc-900/20 backdrop-blur-3xl ${card.size}`}
+              className={`relative overflow-hidden group p-8 rounded-3xl border border-white/10 bg-zinc-900/20 backdrop-blur-3xl ${card.size}`}
             >
               {/* Inner Radial Glow */}
               <div className={`absolute inset-0 bg-gradient-to-br ${card.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
