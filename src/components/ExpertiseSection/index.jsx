@@ -39,8 +39,12 @@ const ExpertiseSection = () => {
     <section className="py-24 px-8 bg-black">
       <div className="max-w-6xl mx-auto">
         <div className="mb-12">
-          <h2 className="text-xs uppercase tracking-[0.4em] text-zinc-500 font-bold mb-2">Expertise</h2>
-          <p className="text-2xl md:text-4xl font-bold text-white">Technical Specialized Skills</p>
+          <h2 className="text-xs uppercase tracking-[0.4em] text-zinc-500 font-bold mb-2">
+            Expertise
+          </h2>
+          <p className="text-2xl md:text-4xl font-bold text-white">
+            Technical Specialized Skills
+          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -55,13 +59,19 @@ const ExpertiseSection = () => {
               className={`relative overflow-hidden group p-8 rounded-3xl border border-white/10 bg-zinc-900/20 backdrop-blur-3xl ${card.size}`}
             >
               {/* Inner Radial Glow */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${card.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
-              
+              <div
+                className={`absolute inset-0 bg-gradient-to-br ${card.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
+              />
+
               <div className="relative z-10 flex flex-col h-full justify-between">
                 <div className="text-3xl mb-4">{card.icon}</div>
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-2">{card.title}</h3>
-                  <p className="text-gray-500 text-sm leading-relaxed font-thin">{card.desc}</p>
+                  <h3 className="text-xl font-bold text-white mb-2">
+                    {card.title}
+                  </h3>
+                  <p className="text-gray-500 text-sm leading-relaxed font-thin">
+                    {card.desc}
+                  </p>
                 </div>
               </div>
 

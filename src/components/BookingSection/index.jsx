@@ -2,94 +2,123 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { InlineWidget } from "react-calendly";
-import { FiMail, FiPhone, FiMapPin } from "react-icons/fi"; // Added FiMapPin
+import {
+  FiMail,
+  FiPhone,
+  FiMapPin,
+  FiArrowUpRight,
+  FiClock,
+} from "react-icons/fi";
 
 const BookingSection = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  // Simple local time for Dubai (GMT+4)
+  const [time, setTime] = useState(
+    new Date().toLocaleTimeString("en-US", {
+      timeZone: "Asia/Dubai",
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: true,
+    }),
+  );
+
   return (
     <section
       id="booking"
-      className="py-24 px-8 flex flex-col items-center justify-center bg-black"
+      className="py-32 px-6 md:px-12 bg-black overflow-hidden"
     >
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        className="relative group max-w-4xl w-full"
-      >
-        <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-violet-600 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
-
-        <div className="relative px-8 py-12 bg-zinc-900/50 backdrop-blur-xl border border-white/10 rounded-2xl flex flex-col items-center md:text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">
-            Let&apos;s build something{" "}
-            <span className="text-blue-500">extraordinary.</span>
-          </h2>
-          <p className="text-gray-400 mb-8 max-w-md leading-relaxed font-thin md:text-md text-sm">
-            Have a project in mind or just want to talk tech? Grab a spot on my
-            calendar or reach out directly.
-          </p>
-
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+          {/* LEFT SIDE: THE PITCH */}
           <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="calendly-button-wrapper mb-12"
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="space-y-8"
           >
-            <button
+            <div className="space-y-4">
+              <h2 className="text-sm uppercase tracking-[0.4em] text-zinc-500  font-bold">
+                contact
+              </h2>
+              <h3 className="text-4xl md:text-4xl font-bold text-white tracking-tighter leading-[0.9]">
+                Let&apos;s build <br />
+                <span className=" italic text-blue-500">the future.</span>
+              </h3>
+            </div>
+
+            <p className="text-zinc-400 text-lg md:text-xl font-light max-w-md leading-relaxed">
+              Currently accepting new projects and technical consultations. Grab
+              a spot on my calendar or reach out via traditional channels.
+            </p>
+
+            <motion.button
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
               onClick={() => setIsOpen(true)}
-              className="px-8 py-4 bg-white text-sm md:text-md font-semibold rounded-full hover:bg-blue-500 hover:text-white transition-all duration-300 shadow-lg text-black"
+              className="group flex items-center gap-4 bg-white text-black px-8 py-5 rounded-full font-bold text-lg transition-all hover:bg-blue-600 hover:text-white"
             >
-              Schedule a 15-min Call
-            </button>
+              Schedule a Call
+              <FiArrowUpRight className="text-xl group-hover:rotate-45 transition-transform" />
+            </motion.button>
           </motion.div>
 
-          {/* CONTACT INFO GRID */}
-          {/* CONTACT INFO GRID */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 w-full pt-8 border-t border-white/5">
-            {/* Email */}
-            <a
-              href="mailto:hananhpk@gmail.com"
-              className="flex items-center justify-start sm:justify-center space-x-3 text-zinc-400 hover:text-white transition-colors group/link"
-            >
-              <FiMail
-                size={18}
-                className="group-hover/link:text-blue-500 transition-colors flex-shrink-0"
-              />
-              <span className="text-xs font-light tracking-tight">
-                hananhpk@gmail.com
-              </span>
-            </a>
+          {/* RIGHT SIDE: THE DIRECT CHANNELS */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="relative"
+          >
+            {/* Decorative background blur */}
+            <div className="absolute -top-20 -right-20 w-64 h-64 bg-blue-600/10 blur-[100px] rounded-full" />
 
-            {/* Phone */}
-            <a
-              href="tel:+971509443818"
-              className="flex items-center justify-start sm:justify-center space-x-3 text-zinc-400 hover:text-white transition-colors group/link"
-            >
-              <FiPhone
-                size={18}
-                className="group-hover/link:text-blue-500 transition-colors flex-shrink-0"
-              />
-              <span className="text-xs font-light tracking-tight">
-                +971 50 944 3818
-              </span>
-            </a>
-
-            {/* Location */}
-            <div className="flex items-center justify-start sm:justify-center space-x-3 text-zinc-400 cursor-default">
-              <FiMapPin size={18} className="text-zinc-500 flex-shrink-0" />
-              <span className="text-xs font-light tracking-tight">
-                Dubai, UAE
-              </span>
+            <div className="relative space-y-1 w-full">
+              {[
+                {
+                  label: "Email",
+                  value: "hananhpk@gmail.com",
+                  href: "mailto:hananhpk@gmail.com",
+                  icon: <FiMail />,
+                },
+                {
+                  label: "WhatsApp / Call",
+                  value: "+971 50 944 3818",
+                  href: "tel:+971509443818",
+                  icon: <FiPhone />,
+                },
+                {
+                  label: "Location",
+                  value: "Dubai, United Arab Emirates",
+                  href: null,
+                  icon: <FiMapPin />,
+                },
+              ].map((contact, i) => (
+                <a
+                  key={i}
+                  href={contact.href}
+                  target={contact.href ? "_blank" : undefined}
+                  className={`flex flex-col p-8 border-b border-white/5 group hover:bg-zinc-900/40 transition-all ${!contact.href && "cursor-default"}`}
+                >
+                  <div className="flex justify-between items-center">
+                    <div className="space-y-1">
+                      <p className="text-[10px] uppercase tracking-widest text-zinc-500 font-bold">
+                        {contact.label}
+                      </p>
+                      <p className="text-xl md:text-2xl text-zinc-200 font-light group-hover:text-blue-500 transition-colors">
+                        {contact.value}
+                      </p>
+                    </div>
+                    <div className="text-zinc-700 group-hover:text-blue-500 transition-colors text-2xl">
+                      {contact.icon}
+                    </div>
+                  </div>
+                </a>
+              ))}
             </div>
-          </div>
-
-          <div className="mt-10 flex items-center space-x-2 text-xs text-zinc-500 uppercase tracking-widest">
-            <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-            <span className="text-[10px]">Available</span>
-          </div>
+          </motion.div>
         </div>
-      </motion.div>
+      </div>
 
       {/* Calendly Modal Content */}
       <AnimatePresence>
@@ -98,40 +127,31 @@ const BookingSection = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-10 bg-black/40 backdrop-blur-3xl"
+            className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-10 bg-black/80 backdrop-blur-xl"
           >
             <motion.button
-              initial={{ opacity: 0, scale: 0 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0 }}
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
               onClick={() => setIsOpen(false)}
-              className="absolute top-6 right-6 z-[110] group p-4"
+              className="absolute top-8 right-8 z-[110] bg-white text-black p-4 rounded-full hover:bg-blue-500 hover:text-white transition-colors"
             >
-              <div className="relative w-8 h-8 flex items-center justify-center">
-                <span className="absolute w-full h-[1px] bg-white rotate-45 group-hover:bg-blue-500 group-hover:rotate-[225deg] transition-all duration-500" />
-                <span className="absolute w-full h-[1px] bg-white -rotate-45 group-hover:bg-blue-500 group-hover:rotate-[-225deg] transition-all duration-500" />
+              <div className="relative w-6 h-6 flex items-center justify-center">
+                <span className="absolute w-full h-[2px] bg-current rotate-45" />
+                <span className="absolute w-full h-[2px] bg-current -rotate-45" />
               </div>
             </motion.button>
 
             <motion.div
-              initial={{
-                y: "100%",
-                opacity: 0,
-                clipPath: "inset(100% 0% 0% 0%)",
-              }}
-              animate={{ y: 0, opacity: 1, clipPath: "inset(0% 0% 0% 0%)" }}
-              exit={{ y: "100%", opacity: 0, clipPath: "inset(100% 0% 0% 0%)" }}
-              transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-              className="w-full max-w-5xl h-full max-h-[85vh] bg-zinc-950 border border-white/5 rounded-[2rem] overflow-hidden shadow-2xl relative"
+              initial={{ y: 50, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: 50, opacity: 0 }}
+              className="w-full max-w-6xl h-full max-h-[90vh] bg-zinc-950 border border-white/10 rounded-[2.5rem] overflow-hidden shadow-2xl"
             >
-              <div className="absolute inset-0 bg-blue-500/5 pointer-events-none" />
               <InlineWidget
                 url="https://calendly.com/hananpk"
                 styles={{ height: "100%", width: "100%" }}
                 pageSettings={{
                   backgroundColor: "09090b",
-                  hideEventTypeDetails: false,
-                  hideLandingPageDetails: false,
                   primaryColor: "3b82f6",
                   textColor: "ffffff",
                 }}
