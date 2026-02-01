@@ -36,7 +36,7 @@ const Footer = () => {
 
       {/* Minimal Copyright */}
       <div className="text-[9px] uppercase tracking-[0.4em] text-zinc-700">
-        © {currentYear} Develeped by Hanan
+        Hanan © {currentYear}
       </div>
 
       {/* Thin Bottom Accent */}
