@@ -19,7 +19,6 @@ export default function Home() {
         <StepContainer />
         <WorkSection />
         <BookingSection />
-        <Footer />
       </NextUIProvider>
     </>
   );

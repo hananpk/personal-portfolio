@@ -97,7 +97,6 @@ const Spotlight = () => {
   return (
     <>
       <div className="h-[100vh] w-full bg-neutral-950 relative flex flex-col items-center justify-center antialiased">
-        <Header />
         <div className="mx-auto p-4 absolute inset-0 flex flex-col items-center justify-center h-full z-10 bg-black/80 w-full">
           <div className="w-full md:w-[600px] mx-auto">
             {/* ... Hey! and I'm Hanan SplitText components ... */}

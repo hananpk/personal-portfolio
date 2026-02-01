@@ -1,5 +1,7 @@
+import Header from "@/components/Header";
 import "./globals.css";
 import localFont from "next/font/local";
+import Footer from "@/components/Footer";
 
 const zalandoSans = localFont({
   src: [
@@ -77,7 +79,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={zalandoSans.className}>{children}</body>
+
+      <body className={zalandoSans.className}>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
