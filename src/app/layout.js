@@ -79,7 +79,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-66R9RDLSM8"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)}
+          gtag('js', new Date());
 
+          gtag('config', 'G-66R9RDLSM8');
+        </script>
+      </head>
       <body className={zalandoSans.className}>
         <Header />
         {children}
