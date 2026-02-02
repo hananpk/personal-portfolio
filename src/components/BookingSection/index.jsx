@@ -47,7 +47,7 @@ const BookingSection = () => {
               </h3>
             </div>
 
-            <p className="text-zinc-400 text-lg md:text-xl font-light max-w-md leading-relaxed">
+            <p className="text-zinc-400 text-md md:text-xl font-light max-w-md leading-relaxed">
               Currently accepting new projects and technical consultations. Grab
               a spot on my calendar or reach out via traditional channels.
             </p>
