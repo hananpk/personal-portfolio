@@ -2,6 +2,8 @@ import Header from "@/components/Header";
 import "./globals.css";
 import localFont from "next/font/local";
 import Footer from "@/components/Footer";
+import Script from "next/script";
+
 
 const zalandoSans = localFont({
   src: [
@@ -80,14 +82,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-66R9RDLSM8"></script>
-        <script>
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-66R9RDLSM8"></Script>
+        <Script>
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments)}
           gtag('js', new Date());
 
           gtag('config', 'G-66R9RDLSM8');
-        </script>
+        </Script>
       </head>
       <body className={zalandoSans.className}>
         <Header />
