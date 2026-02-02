@@ -82,14 +82,24 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-66R9RDLSM8"></Script>
-        <Script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments)}
-          gtag('js', new Date());
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-66R9RDLSM8"
+          strategy="afterInteractive"
+        />
 
-          gtag('config', 'G-66R9RDLSM8');
-        </Script>
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag("js", new Date());
+      gtag("config", "G-66R9RDLSM8");
+    `,
+          }}
+        />
+
       </head>
       <body className={zalandoSans.className}>
         <Header />
