@@ -10,7 +10,6 @@ const Spotlight = () => {
   const containerRef = useRef(null);
   const tagRef = useRef(null);
 
-  // 1. Smooth Mouse Tracking for the Background
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
   const springX = useSpring(mouseX, { stiffness: 100, damping: 30 });
@@ -24,7 +23,6 @@ const Spotlight = () => {
     };
     window.addEventListener("mousemove", handleMouseMove);
 
-    // Default GSAP Entrance
     const tl = gsap.timeline();
     tl.fromTo(tagRef.current,
       { y: 20, opacity: 0 },
@@ -73,7 +71,7 @@ const Spotlight = () => {
           ref={tagRef}
           className="text-left tracking-[0.3em] text-blue-500 uppercase font-mono my-4 text-xs md:text-sm opacity-0"
         >
-          // Software Engineer
+          | Software Engineer
         </p>
 
         <div className="text-zinc-400 text-sm md:text-base font-light my-6 text-justify leading-relaxed border-l border-white/10 pl-6">
