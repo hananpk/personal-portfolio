@@ -86,4 +86,55 @@ export const projects = [
             "Pre-to-Post event engagement tools to maximize organic reach."
         ],
     },
+    {
+        id: "3",
+        slug: "fluid-glass",
+        title: "Fluid Glass",
+        category: "Open Source • React Library",
+        url: "https://www.npmjs.com/package/fluid-glass-react", // Or your GitHub repo
+        image: "https://res.cloudinary.com/dx5ugtyis/image/upload/v1770284978/fluid-glass-preview_daj6p0.png",
+        tags: ["Package Design", "Performance", "DX"],
+        description: "A high-performance React component library for dynamic, liquid-style frosted glass effects.",
+        fullDescription:
+            "Fluid Glass was born out of a need for highly performant, customizable glassmorphism effects that don't tank browser frame rates. Traditional backdrop-filters are expensive; this library optimizes rendering cycles and leverages hardware acceleration to provide silky-smooth 'liquid' glass overlays. <br/><br/>The library provides a declarative API for developers to inject sophisticated mesh gradients and frosted aesthetics into any React project with minimal configuration, ensuring a premium look without the CSS headache.",
+
+        features: [
+            "Zero-config setup for complex backdrop-filter stacks.",
+            "Dynamic Mesh Gradient engine with GPU acceleration.",
+            "Tree-shakeable architecture with a sub-5kb footprint.",
+            "Fully typed API for seamless TypeScript integration.",
+            "Adaptive performance modes for low-power mobile devices."
+        ],
+        process: [
+            {
+                title: "Shader Optimization",
+                description: "Refined CSS backdrop-filter combinations to ensure consistent 60fps performance across Chromium and WebKit browsers."
+            },
+            {
+                title: "API Ergonimics",
+                description: "Designed a 'Lego-block' style component architecture, allowing developers to nest glass layers with automatic inheritance."
+            },
+            {
+                title: "CI/CD Distribution",
+                description: "Automated the publishing workflow with semantic versioning and automated bundle size tracking on every PR."
+            }
+        ],
+
+        stats: {
+            role: "Author / Lead Maintainer",
+            year: "2025",
+            performance: "< 5kb Gzipped"
+        },
+
+        stack: [
+            "React",
+            "TypeScript",
+            "Tailwind CSS",
+            "Framer Motion",
+            "Rollup",
+            "NPM",
+            "GitHub Actions",
+            "Changesets"
+        ],
+    },
 ];
