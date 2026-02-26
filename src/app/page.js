@@ -1,7 +1,7 @@
 "use client";
 import BookingSection from "@/components/BookingSection";
 import ExpertiseSection from "@/components/ExpertiseSection";
-import Footer from "@/components/Footer";
+import HowItWorks from "@/components/HowItWorks/HowItWork";
 import ResumeSection from "@/components/ResumeSection";
 import Spotlight from "@/components/Spotlight";
 import StepContainer from "@/components/StepContainer/StepContainer";
@@ -17,6 +17,7 @@ export default function Home() {
         <ResumeSection />
         <ExpertiseSection />
         <StepContainer />
+        <HowItWorks/>
         <WorkSection />
         <BookingSection />
       </NextUIProvider>

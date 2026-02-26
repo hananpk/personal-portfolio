@@ -36,7 +36,7 @@ const ResumeSection = () => {
               download="Hanan_Resume.pdf"
               whileHover="hover"
               whileTap="tap"
-              className="relative z-10 flex items-center space-x-4 text-sm md:text-lg bg-white px-10 py-5 rounded-2xl text-black font-semibold overflow-hidden"
+              className="relative z-10 flex items-center space-x-4 text-sm md:text-lg bg-white px-10 py-5 rounded-full text-black font-semibold overflow-hidden"
             >
 
               <motion.div 
