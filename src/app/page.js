@@ -17,7 +17,7 @@ export default function Home() {
         <ResumeSection />
         <ExpertiseSection />
         <StepContainer />
-        <HowItWorks/>
+        {/* <HowItWorks/> */}
         <WorkSection />
         <BookingSection />
       </NextUIProvider>

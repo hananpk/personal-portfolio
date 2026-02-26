@@ -3,12 +3,11 @@ import gsap from "gsap";
 import { useEffect, useRef } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { Send, ArrowRight } from "lucide-react";
+import Image from "next/image"; // Import Next.js Image component
 import SocialIcons from "@/widgets/social";
 import SplitText from "../SplitText";
 import ColorBends from "../ColorBlend";
-import { Assets } from "@/assets";
 import avatar from "../../assets/images/hanan-avatar.jpg";
-
 
 const Spotlight = () => {
   const containerRef = useRef(null);
@@ -33,7 +32,8 @@ const Spotlight = () => {
     );
 
     return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, []);
+    // Added mouseX and mouseY to dependencies to clear the ESLint warning
+  }, [mouseX, mouseY]);
 
   return (
     <div ref={containerRef} className="min-h-screen w-full bg-[#030303] relative flex items-center justify-center overflow-hidden antialiased py-20 px-6">
@@ -54,7 +54,7 @@ const Spotlight = () => {
 
       <div className="absolute inset-0 z-20 pointer-events-none opacity-[0.15] contrast-150 bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
 
-      <div className="relative z-30 max-w-6xl w-full grid grid-cols-1 md:grid-cols-3 flex flex-col gap-6">
+      <div className="relative z-30 max-w-6xl w-full grid grid-cols-1 md:grid-cols-3 gap-6">
         
         <motion.div 
           initial={{ opacity: 0, x: -20 }}
@@ -63,10 +63,12 @@ const Spotlight = () => {
           className="order-2 md:order-1 bg-white/5 backdrop-blur-md border border-white/10 rounded-[2.5rem] p-4 shadow-2xl flex flex-col"
         >
           <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-zinc-900">
-            <img 
-              src={avatar.src || avatar} 
+            <Image 
+              src={avatar} 
               alt="Hanan" 
-              className="object-cover w-full h-full transition-all duration-700"
+              fill
+              className="object-cover transition-all duration-700"
+              priority 
             />
           </div>
           <div className="mt-6 flex items-center justify-between px-2 pb-2">
@@ -87,7 +89,6 @@ const Spotlight = () => {
           className="order-1 md:order-2 md:col-span-2 bg-white/5 backdrop-blur-md border border-white/10 rounded-[2.5rem] p-8 md:p-12 shadow-2xl flex flex-col justify-between"
         >
           <div>
-            {/* Status Badge */}
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-[11px] font-medium text-white mb-8">
               <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
               Available for new projects
@@ -97,13 +98,10 @@ const Spotlight = () => {
             <div className="text-4xl md:text-6xl font-bold leading-tight tracking-tight text-white">
               <SplitText text="Hey!" className="text-white/30" />
               <div className="flex flex-wrap items-center gap-x-4">
-                <span>I'm</span>
-                
+                {/* Fixed unescaped apostrophe */}
+                <span>I&apos;m</span>
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-white/60">Hanan</span>
               </div>
-              {/* <div className="text-2xl md:text-5xl font-light mt-2 text-white/90">
-                Building <span className="italic font-serif text-blue-500">Exceptional</span> Digital Experiences
-              </div> */}
             </div>
 
             <div ref={bioRef} className="mt-8 text-zinc-400 font-thin md:text-lg max-w-xl leading-relaxed opacity-0">
@@ -114,14 +112,14 @@ const Spotlight = () => {
             </div>
           </div>
 
-          {/* Socials & CTA */}
           <div className="mt-12 flex flex-wrap items-center justify-between gap-6">
             <div className="flex items-center gap-4">
                <SocialIcons />
             </div>
             
             <button className="group flex items-center gap-4 bg-white text-black px-6 py-3 rounded-full hover:bg-blue-500 hover:text-white transition-all duration-300">
-              <span className="font-bold">Let's Connect</span>
+              {/* Fixed unescaped apostrophe */}
+              <span className="font-bold">Let&apos;s Connect</span>
               <div className="p-1 rounded-full bg-black/10 group-hover:bg-white/20">
                 <ArrowRight className="w-4 h-4" />
               </div>
