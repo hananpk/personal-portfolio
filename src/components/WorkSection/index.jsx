@@ -15,11 +15,9 @@ const WorkSection = () => {
       id="work"
       className="relative min-h-screen bg-black text-white py-24 px-8 md:px-24 overflow-hidden"
     >
-      {/* Background Decorative Element */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/5 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16">
-        {/* Left Side: Project List */}
         <div className="lg:col-span-5 space-y-12">
           <div>
             <motion.h2
@@ -65,7 +63,6 @@ const WorkSection = () => {
                   </div>
                 </Link>
 
-                {/* Hover Background Fill */}
                 <motion.div
                   className="absolute inset-0 bg-zinc-900/0 group-hover:bg-zinc-900/30 -mx-4 rounded-xl transition-colors duration-500"
                   layoutId="hoverBg"
@@ -83,7 +80,6 @@ const WorkSection = () => {
           </motion.button>
         </div>
 
-        {/* Right Side: Interactive UI Preview */}
         <div className="lg:col-span-7 sticky top-24 h-fit hidden lg:block">
           <motion.div
             key={activeProject.id}
@@ -92,7 +88,7 @@ const WorkSection = () => {
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
             className="relative aspect-[4/3] w-full perspective-1000"
           >
-            {/* Main Image Container */}
+
             <div className="relative h-full w-full overflow-hidden rounded-[2rem] border border-white/10 bg-zinc-900 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.5)]">
               <AnimatePresence mode="wait">
                 <motion.img
@@ -106,7 +102,6 @@ const WorkSection = () => {
                 />
               </AnimatePresence>
 
-              {/* Tag Cloud overlay */}
               <div className="absolute top-8 left-8 flex gap-2">
                 {activeProject.tags.map((tag, i) => (
                   <span
@@ -118,7 +113,6 @@ const WorkSection = () => {
                 ))}
               </div>
 
-              {/* Bottom Info Overlay */}
               <div className="absolute inset-x-0 bottom-0 p-12 bg-gradient-to-t from-black via-black/40 to-transparent">
                 <div className="flex items-center gap-4">
                   <div className="h-[1px] w-12 bg-blue-500" />

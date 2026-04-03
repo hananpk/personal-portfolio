@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { Assets } from "@/assets";
+import Link from "next/link";
 
 const Header = () => {
   return (
@@ -10,14 +11,16 @@ const Header = () => {
         <div className="group relative cursor-pointer">
           <div className="absolute -inset-2 bg-blue-500/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-all duration-700 group-hover:scale-150" />
           <div className="relative transform transition-all duration-500 group-hover:scale-110 group-active:scale-95">
-            <Image
-              src={Assets.Logo}
-              width={65}
-              height={65}
-              alt="Logo"
-              className="brightness-125 contrast-125"
-              priority
-            />
+            <Link href="/">
+              <Image
+                src={Assets.Logo}
+                width={65}
+                height={65}
+                alt="Logo"
+                className="brightness-125 contrast-125"
+                priority
+              />
+            </Link>
           </div>
           <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-[1px] bg-gradient-to-r from-transparent via-blue-400 to-transparent group-hover:w-full transition-all duration-500 shadow-[0_0_10px_rgba(59,130,246,0.5)]" />
         </div>
