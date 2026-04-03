@@ -133,9 +133,9 @@ const Spotlight = () => {
           transition={{ dura: 0.8 }}
           className="order-1 md:order-2 w-1/2 flex flex-col justify-center"
         >
-          <div className="inline-flex w-fit items-center gap-2 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 text-[11px] font-bold text-blue-400 mb-8 uppercase tracking-widest">
-            <span className="w-2 h-2 rounded-full bg-blue-500 shadow-[0_0_10px_#3b82f6]"></span>
-            Active Now
+          <div className="inline-flex w-fit items-center gap-2 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 text-[11px] font-bold text-gray-500 mb-8 uppercase tracking-widest">
+            <span className="w-2 h-2 rounded-full bg-green-400 shadow-[0_0_10px_#3b82f6]"></span>
+            Active
           </div>
 
           <div className="text-5xl md:text-5xl font-black leading-none tracking-tighter text-white mb-8">
