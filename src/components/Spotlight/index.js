@@ -102,7 +102,9 @@ const Spotlight = () => {
                 className="relative w-full h-full"
               >
                 <Image
-                  src={avatar}
+                  src={
+                    "https://res.cloudinary.com/dx5ugtyis/image/upload/v1775252467/kling_20260324_%E4%BD%9C%E5%93%81_Ultra_real_410_1_rhqibu.jpg"
+                  }
                   alt="Hanan"
                   fill
                   className="object-cover contrast-110 brightness-90 grayscale-[20%] group-hover:grayscale-0 transition-all duration-700"
