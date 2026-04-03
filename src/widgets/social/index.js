@@ -46,7 +46,7 @@ const SocialIcons = () => {
         <FaInstagram />
       </Link>
       <Link
-        href="https://x.com/hanaanme"
+        href="https://x.com/hanaan_me"
         target="_blank"
         className="text-neutral-200 "
       >
