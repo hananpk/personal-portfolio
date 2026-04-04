@@ -78,7 +78,7 @@ const Spotlight = () => {
         }}
       />
 
-      <div className="relative z-30 max-w-6xl w-full flex items-center justify-center gap-10 sticky top-24">
+      <div className="relative z-30 max-w-6xl w-full flex items-center justify-center flex-col md:flex-row gap-10 sticky top-24">
         <motion.div
           style={{
             rotateX,
@@ -140,7 +140,7 @@ const Spotlight = () => {
             Active
           </div>
 
-          <div className="text-5xl md:text-5xl font-black leading-none tracking-tighter text-white mb-8">
+          <div className="text-4xl md:text-5xl font-black leading-none tracking-tighter text-white mb-8">
             <SplitText text="Developing" className="text-white/60 p-2 pl-0" />
             <div className="flex flex-wrap items-center gap-x-2">
               <span>FUTURE</span>
@@ -161,7 +161,7 @@ const Spotlight = () => {
             </p>
           </div>
 
-          <div className="mt-16 flex flex-wrap items-center gap-8">
+          <div className="mt-8 flex flex-wrap items-center gap-8">
             <SocialIcons />
 
             <motion.a
