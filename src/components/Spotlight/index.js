@@ -85,12 +85,11 @@ const Spotlight = () => {
             rotateY,
             skewX,
             z: 50,
-            transformStyle: "preserve-3d",
           }}
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="order-2 md:order-1 relative group w-[350px]"
+          className="order-1 relative group w-[300px] md:w-[350px]"
         >
           <div className="bg-white/5 backdrop-blur-2xl border border-white/20 rounded-[3rem] p-3 shadow-[0_0_50px_rgba(0,0,0,0.5)] overflow-hidden">
             <div className="relative aspect-[4/5] overflow-hidden rounded-[2.5rem] bg-black">
@@ -133,7 +132,7 @@ const Spotlight = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ dura: 0.8 }}
-          className="order-1 md:order-2 w-1/2 flex flex-col justify-center"
+          className="order-1 md:order-2 w-full  px-6 md:px-0 md:w-1/2 flex flex-col justify-center"
         >
           <div className="inline-flex w-fit items-center gap-2 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 text-[11px] font-bold text-gray-500 mb-8 uppercase tracking-widest">
             <span className="w-2 h-2 rounded-full bg-green-400 shadow-[0_0_10px_#3b82f6]"></span>
