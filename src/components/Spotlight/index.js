@@ -15,7 +15,7 @@ export default function Spotlight() {
     <section className="relative min-h-screen w-full overflow-hidden bg-black text-white">
       {/* Dotted gradient backgrounds */}
       <div
-        className="pointer-events-none absolute inset-0 opacity-70"
+        className="pointer-events-none absolute inset-0 opacity-60"
         style={{
           backgroundImage:
             "radial-gradient(circle, rgba(255,255,255,0.18) 1px, transparent 1px)",
@@ -27,7 +27,7 @@ export default function Spotlight() {
         }}
       />
       <div
-        className="pointer-events-none absolute inset-0 opacity-50"
+        className="pointer-events-none absolute inset-0 opacity-70"
         style={{
           backgroundImage:
             "radial-gradient(circle, rgba(60, 135, 255, 0.55) 1px, transparent 1px)",
