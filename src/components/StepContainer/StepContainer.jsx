@@ -14,11 +14,7 @@ const StepContainer = () => {
   });
 
   return (
-    <section
-      id="tech_stack"
-      className="relative bg-black w-full"
-      ref={container}
-    >
+    <section id="skills" className="relative bg-black w-full" ref={container}>
       <div className="container mx-auto flex flex-col lg:flex-row items-start gap-10 px-6">
         <div className="relative md:sticky top-0 h-auto md:h-screen flex flex-col justify-start md:justify-center py-12 md:py-20 w-full lg:w-1/3">
           <motion.div

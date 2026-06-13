@@ -12,7 +12,7 @@ const WorkSection = () => {
 
   return (
     <section
-      id="work"
+      id="works"
       className="relative min-h-screen bg-black text-white py-24 px-8 md:px-24 overflow-hidden"
     >
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/5 blur-[120px] rounded-full pointer-events-none" />
@@ -88,7 +88,6 @@ const WorkSection = () => {
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
             className="relative aspect-[4/3] w-full perspective-1000"
           >
-
             <div className="relative h-full w-full overflow-hidden rounded-[2rem] border border-white/10 bg-zinc-900 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.5)]">
               <AnimatePresence mode="wait">
                 <motion.img

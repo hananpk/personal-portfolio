@@ -104,7 +104,7 @@ export default function Spotlight() {
         </p>
 
         {/* Stats */}
-        <div className="mt-20 grid grid-cols-3 gap-6 sm:gap-16">
+        <div className="mt-20 grid grid-cols-3 md:w-[60%] gap-6 sm:gap-16">
           {[
             { value: "200+", label: "Projects Completed" },
             { value: "10+", label: "Brand Partnership" },
