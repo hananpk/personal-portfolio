@@ -86,12 +86,12 @@ export default function Spotlight() {
               />
             ))}
           </div>
-          <span className="text-2xl font-bold">100+</span>
+          <span className="font-bold text-xl md:text-2xl">100+</span>
         </div>
-        <p className="-mt-3 mb-10 text-white/60">Total Satisfied Client</p>
+        <p className="-mt-3 mb-10 text-white/60 text-sm md:text-md">Total Satisfied Client</p>
 
         {/* Headline */}
-        <h1 className="text-6xl font-extrabold leading-[0.95] sm:text-7xl lg:text-8xl">
+        <h1 className="font-extrabold leading-[0.95] text-5xl md:text-7xl lg:text-8xl">
           <span className="block">It&apos;s Me</span>
           <span className="mt-2 block -skew-x-6 text-blue-500">
             HANAN
@@ -99,7 +99,7 @@ export default function Spotlight() {
         </h1>
 
         {/* Description */}
-        <p className="mt-8 max-w-md text-lg text-white/70">
+        <p className="mt-4 max-w-md text-lg text-white/70">
           AI Software Engineer
         </p>
 

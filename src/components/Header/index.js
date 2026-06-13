@@ -30,7 +30,7 @@ const Header = () => {
                   width={65}
                   height={65}
                   alt="Logo"
-                  className="brightness-125 contrast-125"
+                  className="brightness-125 contrast-125 w-12 md:w-16"
                   priority
                 />
               </Link>
@@ -48,7 +48,7 @@ const Header = () => {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
               </div>
-              <span className="text-[10px] uppercase tracking-[0.2em] text-zinc-400 font-medium">
+              <span className="text-[8px] md:text-[10px] uppercase tracking-[0.2em] text-zinc-400 font-medium">
                 Available
               </span>
             </div>
