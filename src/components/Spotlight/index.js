@@ -92,9 +92,9 @@ export default function Spotlight() {
 
         {/* Headline */}
         <h1 className="text-6xl font-extrabold leading-[0.95] sm:text-7xl lg:text-8xl">
-          <span className="block">IT'S ME</span>
+          <span className="block">It&apos;s Me</span>
           <span className="mt-2 block -skew-x-6 text-blue-500">
-            Hanan
+            HANAN
           </span>
         </h1>
 
