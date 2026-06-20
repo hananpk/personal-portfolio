@@ -28,7 +28,7 @@ const chapters = [
     summary:
       "A year of building deeper React fluency across a wider range of products.",
     story:
-      "At Webandcrafts I worked across a broader spread of client products, sharpening how I think about component architecture, state management, and translating design files into interfaces that actually hold up across browsers and screen sizes.",
+      "At Webandcrafts I worked across a broader spread of client products, sharpening how I think about component architecture, state management, and translating design files into interfaces that actually hold up across browsers and screen sizes. I developed large-scale web applications and marketing websites for clients across different industries, often picking up complex, ambiguous requirements and turning them into structured, maintainable codebases. This was where I got comfortable working with bigger teams, tighter handoffs between design and engineering, and the kind of edge-case-heavy UI work that doesn't show up in a portfolio screenshot but is most of what real frontend engineering actually is.",
   },
   {
     id: "premagic",
@@ -38,7 +38,7 @@ const chapters = [
     location: "Bangalore, India",
     summary: "Stepped into product thinking, not just implementation.",
     story:
-      "Premagic is where the title changed from Frontend to Product Engineer, and the work changed with it. I built announcement carousels, news sections, and scroll-driven UI with Framer Motion — but more importantly, started owning small product decisions end to end, not just executing a spec.",
+      "Premagic marked a major evolution in my career—from Frontend Engineer to Product Engineer. While continuing to build high-performance user experiences and interactive interfaces, I became deeply involved in developing AI-powered products and data-driven solutions at scale. My work included AI facial scanning systems, automated attendee poster generation, real-time event engagement experiences, and AI-powered data visualization dashboards that transformed large volumes of event data into meaningful insights. I also worked extensively with real-time data streams and analytics platforms to help organizers track attendee engagement, campaign performance, and event outcomes in real time. <br/> <br/> Beyond engineering, I began taking ownership of product decisions end-to-end. Alongside building features such as announcement carousels, dynamic news sections, and scroll-driven experiences with Framer Motion, I collaborated closely with design, business, and engineering teams to define requirements, shape user experiences, and deliver scalable solutions. This transition allowed me to contribute not only as an engineer but also as a product thinker focused on creating measurable business impact through AI, data, and modern web technologies.",
   },
   {
     id: "founder",
@@ -48,7 +48,7 @@ const chapters = [
     location: "Kozhikode, India",
     summary: "Took the leap — built and shipped two products of my own.",
     story:
-      "After three roles of building other people's products, I built my own. Eight months as founder, taking two SaaS ideas from blank repo to working product — design system, backend, payments, the whole arc. This chapter taught me more about tradeoffs and ownership than any role before it.",
+      "After several years of building products for others, I took the leap to build my own. As a founder, I spent eight months taking two SaaS products from concept to launch—owning every aspect of the journey, from product strategy and design systems to backend architecture, payments, deployment, and customer acquisition. Beyond building the products, I successfully attracted and onboarded customers, validating ideas through real-world usage and feedback while continuously iterating on the experience.<br/><br/> This chapter taught me far more than engineering alone. It strengthened my understanding of product strategy, growth, prioritization, and execution under uncertainty. Balancing user needs, technical constraints, and business goals gave me firsthand experience in turning ideas into sustainable products and reinforced the importance of ownership, adaptability, and delivering measurable value to customers.",
     products: [
       {
         name: "iinve",
@@ -166,9 +166,10 @@ function Chapter({ chapter, index, total }) {
               transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
               className="overflow-hidden"
             >
-              <p className="mt-5 max-w-xl text-[18px] sm:text-base leading-[1.7] text-white/80 font-serif">
-                {chapter.story}
-              </p>
+              <p
+                className="mt-5 max-w-xl text-[18px] sm:text-base !leading-[1.7] text-white/80 font-serif"
+                dangerouslySetInnerHTML={{ __html: chapter.story }}
+              />
 
               {chapter.products && (
                 <div className="mt-8 grid sm:grid-cols-2 gap-4 max-w-2xl">
