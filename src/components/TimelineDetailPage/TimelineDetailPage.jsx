@@ -5,7 +5,7 @@ import { motion, useInView, AnimatePresence } from "framer-motion";
 import { ArrowUpRight, MapPin, ChevronDown } from "lucide-react";
 import Link from "next/link";
 import { FiArrowLeft } from "react-icons/fi";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 const chapters = [
   {
