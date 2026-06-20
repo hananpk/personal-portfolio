@@ -82,7 +82,7 @@ const Header = () => {
             animate={{ clipPath: "circle(150% at calc(100% - 50px) 50px)" }}
             exit={{ clipPath: "circle(2% at calc(100% - 50px) 50px)" }}
             transition={{ duration: 0.8, ease: [0.65, 0, 0.35, 1] }}
-            className="fixed inset-0 z-40 bg-zinc-950"
+            className="fixed inset-0 z-40 bg-zinc-950/80 backdrop-blur-md"
           >
             {/* Content layer - fades in once the liquid settles */}
             <motion.div

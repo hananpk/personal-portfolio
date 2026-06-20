@@ -263,10 +263,11 @@ export default function TimelineDetailPage() {
           initial={{ opacity: 0, y: 14 }}
           animate={heroInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="mt-6 max-w-lg text-white/55 leading-relaxed"
+          className="mt-6 max-w-lg text-white/55 leading-relaxed font-thin"
         >
-          From a junior frontend seat in Kochi to founding and shipping two SaaS
-          products, and now building from Dubai. Here&apos;s the path, in full.
+          From a junior frontend seat in Kerala to founding and shipping two
+          SaaS products, and now building from Dubai. Here&apos;s the path, in
+          full.
         </motion.p>
       </div>
 

@@ -15,14 +15,14 @@ const StepContainer = () => {
 
   return (
     <section id="skills" className="relative bg-black w-full" ref={container}>
-      <div className="container mx-auto flex flex-col lg:flex-row items-start gap-10 px-6">
+      <div className="container mx-auto flex flex-col lg:flex-row items-start gap-10 px-12">
         <div className="relative md:sticky top-0 h-auto md:h-screen flex flex-col justify-start md:justify-center py-12 md:py-20 w-full lg:w-1/3">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-xs uppercase tracking-[0.6em] text-zinc-500 font-bold mb-4">
+            <h2 className="text-xs uppercase tracking-[0.2em] text-zinc-500 font-bold mb-4 font-thin">
               Technical Layers
             </h2>
             <p className="text-3xl md:text-4xl text-white font-bold tracking-tight leading-tight">

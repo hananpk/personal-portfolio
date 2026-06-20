@@ -39,7 +39,7 @@ const ExpertiseSection = () => {
     <section className="py-24 px-8 bg-black">
       <div className="max-w-6xl mx-auto">
         <div className="mb-12">
-          <h2 className="text-xs uppercase tracking-[0.4em] text-zinc-500 font-bold mb-2">
+          <h2 className="text-xs uppercase tracking-[0.2em] text-zinc-500 font-bold mb-4 font-thin">
             Expertise
           </h2>
           <p className="text-2xl md:text-4xl font-bold text-white">

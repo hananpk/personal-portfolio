@@ -1,7 +1,13 @@
 "use client";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Calendar, Sparkles } from "lucide-react";
+import {
+  Braces,
+  Calendar,
+  LaptopMinimal,
+  Rocket,
+  Sparkles,
+} from "lucide-react";
 import Counter from "../Counter";
 import me from "../../assets/images/me.png";
 import Image from "next/image";
@@ -96,7 +102,7 @@ export default function Spotlight() {
         className="relative z-10 mx-auto flex h-full min-h-screen max-w-7xl flex-col justify-center px-6 py-20 sm:px-10 lg:px-16"
       >
         {/* Avatars + clients */}
-        <motion.div variants={itemVariants}>
+        {/* <motion.div variants={itemVariants}>
           <div className="mb-6 flex items-center gap-3">
             <div className="flex -space-x-3">
               {[
@@ -114,10 +120,10 @@ export default function Spotlight() {
             </div>
             <span className="font-bold text-xl md:text-2xl">100+</span>
           </div>
-          <p className="-mt-3 mb-10 text-white/60 text-sm md:text-md">
+          <p className="-mt-3 mb-10 text-white/60 text-sm md:text-md font-thin">
             Total Satisfied Client
           </p>
-        </motion.div>
+        </motion.div> */}
 
         {/* Headline */}
         <motion.h1
@@ -139,15 +145,28 @@ export default function Spotlight() {
         {/* Stats */}
         <motion.div
           variants={itemVariants}
-          className="mt-20 grid grid-cols-3 md:w-[60%] gap-6 sm:gap-16"
+          className="mt-20 grid grid-cols-3 md:w-[40%] gap-6 sm:gap-16"
         >
           {[
-            { value: "200+", label: "Projects Completed" },
-            { value: "4+", label: "Years of Experience" },
+            {
+              value: "200+",
+              label: "Projects Completed",
+              icon: <LaptopMinimal size={24} />,
+            },
+            {
+              value: "4+",
+              label: "Years of Experience",
+              icon: <Braces size={24} />,
+            },
+            {
+              value: "2",
+              label: "Products Shipped",
+              icon: <Rocket size={24} />,
+            },
           ].map((stat) => (
             <div key={stat.label}>
               <div className="font-display text-2xl font-bold sm:text-4xl">
-                <Counter value={stat.value} />
+                <Counter value={stat.value} suffix={stat.suffix} />
               </div>
               <div className="mt-1 text-xs md:text-sm text-white/50">
                 {stat.label}

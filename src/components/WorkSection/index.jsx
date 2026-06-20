@@ -23,7 +23,7 @@ const WorkSection = () => {
             <motion.h2
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              className="text-xs uppercase tracking-[0.6em] text-zinc-500 font-bold mb-4"
+              className="text-xs uppercase tracking-[0.2em] text-zinc-500 font-bold mb-4 font-thin"
             >
               Selected Works
             </motion.h2>
