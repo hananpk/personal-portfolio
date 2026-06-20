@@ -89,17 +89,17 @@ function CheckpointText({ cp, isInView, delay, align = "center" }) {
       transition={{ duration: 0.4, delay: delay + 0.1 }}
     >
       <span
-        className={`whitespace-nowrap text-[12px] ${
+        className={`whitespace-nowrap text-sm md:text-[12px] ${
           cp.current ? "text-blue-500 font-medium" : "text-white/80"
         }`}
       >
         {cp.role}
       </span>
-      <span className="whitespace-nowrap text-[11px] text-white/40">
+      <span className="whitespace-nowrap text-[12px] text-white/40">
         {" "}
         {cp.company}
       </span>
-      <span className="whitespace-nowrap text-[11px] text-white/40 font-thin">
+      <span className="whitespace-nowrap text-[12px] text-white/40 font-thin">
         {cp.location}
       </span>
     </motion.div>

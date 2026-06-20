@@ -16,19 +16,19 @@ const Footer = () => {
       <nav className="flex space-x-10 mb-8">
         <a
           href="#work"
-          className="text-[11px] uppercase tracking-[0.3em] text-gray-500 hover:text-white transition-colors duration-300"
+          className="text-[10px] uppercase tracking-[0.3em] text-gray-500 hover:text-white transition-colors duration-300"
         >
           Work
         </a>
         <a
           href="mailto:hananhpk@gmail.com"
-          className="text-[11px] uppercase tracking-[0.3em] text-gray-500 hover:text-white transition-colors duration-300"
+          className="text-[10px] uppercase tracking-[0.3em] text-gray-500 hover:text-white transition-colors duration-300"
         >
           Contact
         </a>
         <a
           href="https://view.me/hanan"
-          className="text-[11px] uppercase tracking-[0.3em] text-gray-500 hover:text-white transition-colors duration-300"
+          className="text-[10px] uppercase tracking-[0.3em] text-gray-500 hover:text-white transition-colors duration-300"
         >
           Resume
         </a>

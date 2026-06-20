@@ -135,13 +135,13 @@ function Chapter({ chapter, index, total }) {
         <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs sm:text-sm text-white/40 mb-4 font-thin">
           <span>{chapter.date}</span>
           <span className="text-white/15">·</span>
-          <span className="flex items-center gap-1">
-            <MapPin size={12} className="text-white/30" />
+          <span className="flex items-center gap-1 mt-2 sm:mt-0">
+            <MapPin size={12} className="text-white/30 " />
             {chapter.location}
           </span>
         </div>
 
-        <p className="text-white/70 leading-relaxed max-w-xl text-[15px] sm:text-base">
+        <p className="text-white/70 leading-relaxed max-w-xl text-[14px] sm:text-base font-thin">
           {chapter.summary}
         </p>
 
@@ -167,7 +167,7 @@ function Chapter({ chapter, index, total }) {
               className="overflow-hidden"
             >
               <p
-                className="mt-5 max-w-xl text-[18px] sm:text-base !leading-[1.7] text-white/80 font-serif"
+                className="mt-5 max-w-xl text-sm md:text-md !leading-[1.7] text-white/80 font-thin"
                 dangerouslySetInnerHTML={{ __html: chapter.story }}
               />
 
@@ -237,9 +237,9 @@ export default function TimelineDetailPage() {
         <Link href="/">
           <button
             onClick={() => router.back()}
-            className="flex items-center gap-2 text-zinc-400 hover:text-white mb-6 font-thin transition-colors mb-14 md:mb-20"
+            className="relative z-[60] group flex h-11 w-11 flex-col items-center justify-center gap-[6px] rounded-full border border-white/10 bg-white/5 backdrop-blur-md transition-colors duration-500 hover:border-blue-400/50 mb-6"
           >
-            <FiArrowLeft /> Back to Home
+            <FiArrowLeft />
           </button>
         </Link>
         <motion.p
