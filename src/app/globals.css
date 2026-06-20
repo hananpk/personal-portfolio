@@ -124,7 +124,19 @@ html {
   scroll-behavior: smooth;
 }
 
+@keyframes gradient-x {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient-x {
+  animation: gradient-x 4s ease infinite;
+}
+
 /* @layer base {
+
+
   .theme {
     --font-heading: var(--font-sans);
     --font-sans: var(--font-sans);

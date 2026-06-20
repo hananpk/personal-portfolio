@@ -163,7 +163,12 @@ export default function Spotlight() {
         {!imageRevealed && (
           <button
             onClick={() => setImageRevealed(true)}
-            className="flex md:hidden items-center justify-center gap-2 rounded-full bg-blue-500 px-4 py-2 font-medium text-white shadow-lg shadow-blue-500/30 transition hover:bg-blue-600 text-sm"
+            className="flex md:hidden items-center justify-center gap-2 rounded-full px-4 py-2 font-medium text-white transition hover:scale-[1.03] text-sm animate-gradient-x"
+            style={{
+              background:
+                "linear-gradient(270deg, #3d87ff, #3a61ed, #3d87ff, #3d87ff)",
+              backgroundSize: "400% 400%",
+            }}
           >
             <Sparkles size={18} />
             Meet Me
