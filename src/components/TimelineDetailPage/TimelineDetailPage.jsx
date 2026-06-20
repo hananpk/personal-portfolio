@@ -5,6 +5,7 @@ import { motion, useInView, AnimatePresence } from "framer-motion";
 import { ArrowUpRight, MapPin, ChevronDown } from "lucide-react";
 import Link from "next/link";
 import { FiArrowLeft } from "react-icons/fi";
+import { useRouter } from "next/router";
 
 const chapters = [
   {
@@ -222,6 +223,7 @@ function Chapter({ chapter, index, total }) {
 
 export default function TimelineDetailPage() {
   const heroRef = useRef(null);
+  const router = useRouter();
   const heroInView = useInView(heroRef, { once: true });
 
   return (
