@@ -46,7 +46,7 @@ const StepCard = (props) => {
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-8">
               <div className="space-y-4 max-w-md">
                 <div className={`w-12 h-1 rounded-full ${color}`} />
-                <h3 className="text-xl md:text-3xl font-bold text-white uppercase tracking-tighter">
+                <h3 className="text-xl md:text-2xl font-bold text-white uppercase tracking-tighter">
                   {name}
                 </h3>
                 <p className="text-zinc-500 leading-relaxed font-thin">

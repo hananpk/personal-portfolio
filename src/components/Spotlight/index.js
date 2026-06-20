@@ -7,7 +7,6 @@ import me from "../../assets/images/me.png";
 import Image from "next/image";
 import PixelatedImage from "../PixelatedImage";
 
-
 export default function Spotlight() {
   const [imageRevealed, setImageRevealed] = useState(false);
 
@@ -30,7 +29,7 @@ export default function Spotlight() {
         className="pointer-events-none absolute inset-0 opacity-70"
         style={{
           backgroundImage:
-            "radial-gradient(circle, rgba(60, 135, 255, 0.55) 1px, transparent 1px)",
+            "radial-gradient(circle, #3d87ff8c 1px, transparent 1px)",
           backgroundSize: "16px 16px",
           maskImage:
             "radial-gradient(ellipse 45% 35% at 22% 92%, black 0%, transparent 75%)",
@@ -88,14 +87,14 @@ export default function Spotlight() {
           </div>
           <span className="font-bold text-xl md:text-2xl">100+</span>
         </div>
-        <p className="-mt-3 mb-10 text-white/60 text-sm md:text-md">Total Satisfied Client</p>
+        <p className="-mt-3 mb-10 text-white/60 text-sm md:text-md">
+          Total Satisfied Client
+        </p>
 
         {/* Headline */}
         <h1 className="font-extrabold leading-[0.95] text-5xl md:text-7xl lg:text-8xl">
           <span className="block">It&apos;s Me</span>
-          <span className="mt-2 block -skew-x-6 text-blue-500">
-            HANAN
-          </span>
+          <span className="mt-2 block -skew-x-6 text-blue-500">HANAN</span>
         </h1>
 
         {/* Description */}
@@ -107,14 +106,16 @@ export default function Spotlight() {
         <div className="mt-20 grid grid-cols-3 md:w-[60%] gap-6 sm:gap-16">
           {[
             { value: "200+", label: "Projects Completed" },
-            { value: "10+", label: "Brand Partnership" },
+            // { value: "2+", label: "Own Startups" },
             { value: "4+", label: "Years of Experience" },
           ].map((stat) => (
             <div key={stat.label}>
               <div className="font-display text-2xl font-bold sm:text-4xl">
                 <Counter value={stat.value} />
               </div>
-              <div className="mt-1 text-xs md:text-sm text-white/50">{stat.label}</div>
+              <div className="mt-1 text-xs md:text-sm text-white/50">
+                {stat.label}
+              </div>
             </div>
           ))}
         </div>
@@ -122,7 +123,6 @@ export default function Spotlight() {
 
       {/* CTA Actions Wrapper */}
       <div className="absolute bottom-10 right-6 z-10 flex flex-col sm:flex-row gap-3 sm:right-10">
-
         {/* Mobile Only: Meet Me Button */}
         {!imageRevealed && (
           <button

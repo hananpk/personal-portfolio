@@ -2,29 +2,90 @@ export const techStackData = [
   {
     name: "Frontend Architecture",
     tools: [
-      "Next.js", "React", "TypeScript", "JavaScript", "HTML", "CSS",
-      "Tailwind CSS", "Git", "Bootstrap", "Material UI", "Shadcn UI",
-      "Hero UI", "Sass", "Context API", "Redux", "Zustand", "SWR", "Recoil"
+      "Next.js",
+      "React",
+      "TypeScript",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Tailwind CSS",
+      "Git",
+      "Bootstrap",
+      "Material UI",
+      "Shadcn UI",
+      "Hero UI",
+      "Sass",
+      "Context API",
+      "Redux",
+      "Zustand",
+      "SWR",
+      "Recoil",
     ],
-    description: "Crafting type-safe, high-performance user interfaces with modern state management.",
-    color: "bg-blue-600"
+    description:
+      "Crafting type-safe, high-performance user interfaces with modern state management.",
+    color: "bg-blue-600",
   },
   {
     name: "Creative Motion & Design",
     tools: [
-      "GSAP", "Framer Motion", "Three.js", "UI/UX Design", "Visual Design",
-      "Figma", "Adobe XD", "Photoshop", "Adobe Illustrator", "Graphic Designing"
+      "GSAP",
+      "Framer Motion",
+      "Three.js",
+      "UI/UX Design",
+      "Visual Design",
+      "Figma",
+      "Adobe XD",
+      "Photoshop",
+      "Adobe Illustrator",
+      "Graphic Designing",
     ],
-    description: "Bringing static designs to life with cinematic transitions and pixel-perfect aesthetics.",
-    color: "bg-purple-600"
+    description:
+      "Bringing static designs to life with cinematic transitions and pixel-perfect aesthetics.",
+    color: "bg-purple-600",
   },
   {
     name: "Backend & Ecosystem",
     tools: [
-      "Node.js", "PostgreSQL", "Prisma", "Docker (Basic)", "CI/CD",
-      "Vercel", "Netlify", "Webflow", "Wix", "No-code", "i18n / next-i18next", "Jest", "React Testing Library"
+      "Node.js",
+      "PostgreSQL",
+      "Prisma",
+      "Docker (Basic)",
+      "CI/CD",
+      "Vercel",
+      "Netlify",
+      "Webflow",
+      "Wix",
+      "No-code",
+      "i18n / next-i18next",
+      "Jest",
+      "React Testing Library",
     ],
-    description: "Architecting scalable server-side logic, automated testing, and seamless deployment workflows.",
-    color: "bg-emerald-600"
+    description:
+      "Architecting scalable server-side logic, automated testing, and seamless deployment workflows.",
+    color: "bg-emerald-600",
+  },
+  {
+    name: "AI Engineering & Automation",
+    tools: [
+      "LLM Integration",
+      "OpenAI API",
+      "Claude",
+      "Claude Code",
+      "Gemini",
+      "AI SDK",
+      "Prompt Engineering",
+      "AI Agents",
+      "Agentic Workflows",
+      "Tool Calling",
+      "RAG",
+      "Vector Search",
+      "Workflow Automation",
+      "Cursor",
+      "GitHub Copilot",
+      "Vibe Coding",
+    ],
+    description:
+      "Developing AI-powered products including facial scanning, poster generation, data insights, intelligent assistants, and automated workflows.",
+    color: "bg-orange-600",
   },
 ];
