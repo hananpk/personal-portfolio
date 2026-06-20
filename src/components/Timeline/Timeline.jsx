@@ -2,6 +2,7 @@
 
 import { motion, useInView, animate } from "framer-motion";
 import { useRef, useEffect } from "react";
+import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
 
 const checkpoints = [
   {
@@ -135,8 +136,8 @@ export default function Timeline() {
   }, [isInView]);
 
   return (
-    <div className="bg-black py-20">
-      <div ref={ref} className="w-full max-w-5xl mx-auto py-14 px-4">
+    <div className="bg-black md:py-20">
+      <div ref={ref} className="w-full max-w-5xl mx-auto py-14">
         {/* Mobile: animated horizontal scroll timeline */}
         <div className="flex md:hidden">
           <style>{`.timeline-scroll::-webkit-scrollbar{display:none}`}</style>
@@ -145,32 +146,36 @@ export default function Timeline() {
             className="timeline-scroll w-full overflow-x-auto"
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
-            <div className="relative flex items-start gap-x-14 pl-6 pr-10 py-2 w-max">
-              <div
-                className="absolute left-0 right-0 top-[9px] h-[2px] rounded-full"
-                style={{
-                  background: "linear-gradient(90deg, #3d87ff49, #3d87ff)",
-                }}
-              >
-                <motion.div
-                  className="absolute left-0 top-0 h-full rounded-full"
-                  style={{
-                    background:
-                      "linear-gradient(90deg, #3d87ff3d, #3d87ff8c, #3d87ff)",
-                  }}
-                  initial={{ width: 0 }}
-                  animate={isInView ? { width: "100%" } : {}}
-                  transition={{ duration: 1.8, ease: [0.16, 1, 0.3, 1] }}
-                />
-              </div>
-
+            <div className="relative flex items-start gap-x-14 pl-6 pr-10 w-max pt-10">
               {checkpoints.map((cp, i) => {
                 const delay = (i / (checkpoints.length - 1)) * 1.8;
+                const isLast = i === checkpoints.length - 1;
                 return (
                   <div
                     key={cp.date}
                     className="relative flex flex-col items-center gap-3 w-32 shrink-0"
                   >
+                    {!isLast && (
+                      <div
+                        className="absolute top-[9px] left-1/2 h-[2px] rounded-full overflow-hidden"
+                        style={{
+                          width: "184px",
+                          background: "#3d87ff49",
+                        }}
+                      >
+                        <motion.div
+                          className="absolute left-0 top-0 h-full rounded-full"
+                          style={{ background: "#3d87ff" }}
+                          initial={{ width: 0 }}
+                          animate={isInView ? { width: "100%" } : {}}
+                          transition={{
+                            duration: 0.9,
+                            delay,
+                            ease: [0.16, 1, 0.3, 1],
+                          }}
+                        />
+                      </div>
+                    )}
                     <div className="h-[18px] flex items-center justify-center">
                       <Dot cp={cp} isInView={isInView} delay={delay} />
                     </div>
@@ -193,7 +198,7 @@ export default function Timeline() {
           <div
             className="relative h-[3px] w-full rounded-full"
             style={{
-              background: "linear-gradient(90deg, #3d87ff49, #3d87ff)",
+              background: "linear-gradient(90deg, #3d87ff49, #3d87ff58)",
             }}
           >
             <motion.div
@@ -217,9 +222,7 @@ export default function Timeline() {
                   className="absolute top-1/2 -translate-x-1/2 -translate-y-1/2"
                   style={{ left: `${left}%` }}
                 >
-                  <span className="absolute -top-[20px] left-1/2 -translate-x-1/2 md:top-0">
-                    <Dot cp={cp} isInView={isInView} delay={delay} />
-                  </span>
+                  <Dot cp={cp} isInView={isInView} delay={delay} />
 
                   <motion.span
                     className="absolute -top-9 left-1/2 -translate-x-1/2 whitespace-nowrap text-[11px] text-white/40"
