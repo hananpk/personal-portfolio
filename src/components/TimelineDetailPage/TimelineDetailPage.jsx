@@ -266,7 +266,7 @@ export default function TimelineDetailPage() {
           className="mt-6 max-w-lg text-white/55 leading-relaxed"
         >
           From a junior frontend seat in Kochi to founding and shipping two SaaS
-          products, and now building from Dubai. Here's the path, in full.
+          products, and now building from Dubai. Here&apos;s the path, in full.
         </motion.p>
       </div>
 
