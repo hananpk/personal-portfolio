@@ -7,6 +7,27 @@ import me from "../../assets/images/me.png";
 import Image from "next/image";
 import PixelatedImage from "../PixelatedImage";
 
+// Animation configurations
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15, // Delays the start of each child animation
+      delayChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 25 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] }, // Smooth custom ease out
+  },
+};
+
 export default function Spotlight() {
   const [imageRevealed, setImageRevealed] = useState(false);
 
@@ -67,46 +88,61 @@ export default function Spotlight() {
         <div className="absolute inset-0 bg-gradient-to-r from-black via-black/40 to-transparent md:from-black md:via-transparent" />
       </div>
 
-      {/* Main content */}
-      <div className="relative z-10 mx-auto flex h-full min-h-screen max-w-7xl flex-col justify-center px-6 py-20 sm:px-10 lg:px-16">
+      {/* Main content wrapper turned into an animated container */}
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        className="relative z-10 mx-auto flex h-full min-h-screen max-w-7xl flex-col justify-center px-6 py-20 sm:px-10 lg:px-16"
+      >
         {/* Avatars + clients */}
-        <div className="mb-6 flex items-center gap-3">
-          <div className="flex -space-x-3">
-            {[
-              "https://i.pravatar.cc/64?img=12",
-              "https://i.pravatar.cc/64?img=32",
-              "https://i.pravatar.cc/64?img=45",
-            ].map((src, i) => (
-              <img
-                key={i}
-                src={src}
-                alt="Client"
-                className="h-10 w-10 rounded-full border-2 border-black object-cover"
-              />
-            ))}
+        <motion.div variants={itemVariants}>
+          <div className="mb-6 flex items-center gap-3">
+            <div className="flex -space-x-3">
+              {[
+                "https://i.pravatar.cc/64?img=12",
+                "https://i.pravatar.cc/64?img=32",
+                "https://i.pravatar.cc/64?img=45",
+              ].map((src, i) => (
+                <img
+                  key={i}
+                  src={src}
+                  alt="Client"
+                  className="h-10 w-10 rounded-full border-2 border-black object-cover"
+                />
+              ))}
+            </div>
+            <span className="font-bold text-xl md:text-2xl">100+</span>
           </div>
-          <span className="font-bold text-xl md:text-2xl">100+</span>
-        </div>
-        <p className="-mt-3 mb-10 text-white/60 text-sm md:text-md">
-          Total Satisfied Client
-        </p>
+          <p className="-mt-3 mb-10 text-white/60 text-sm md:text-md">
+            Total Satisfied Client
+          </p>
+        </motion.div>
 
         {/* Headline */}
-        <h1 className="font-extrabold leading-[0.95] text-5xl md:text-7xl lg:text-8xl">
+        <motion.h1
+          variants={itemVariants}
+          className="font-extrabold leading-[0.95] text-5xl md:text-7xl lg:text-8xl"
+        >
           <span className="block">It&apos;s Me</span>
           <span className="mt-2 block -skew-x-6 text-blue-500">HANAN</span>
-        </h1>
+        </motion.h1>
 
         {/* Description */}
-        <p className="mt-4 max-w-md text-lg text-white/70">
+        <motion.p
+          variants={itemVariants}
+          className="mt-4 max-w-md text-lg text-white/70"
+        >
           AI Software Engineer
-        </p>
+        </motion.p>
 
         {/* Stats */}
-        <div className="mt-20 grid grid-cols-3 md:w-[60%] gap-6 sm:gap-16">
+        <motion.div
+          variants={itemVariants}
+          className="mt-20 grid grid-cols-3 md:w-[60%] gap-6 sm:gap-16"
+        >
           {[
             { value: "200+", label: "Projects Completed" },
-            // { value: "2+", label: "Own Startups" },
             { value: "4+", label: "Years of Experience" },
           ].map((stat) => (
             <div key={stat.label}>
@@ -118,8 +154,8 @@ export default function Spotlight() {
               </div>
             </div>
           ))}
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
       {/* CTA Actions Wrapper */}
       <div className="absolute bottom-10 right-6 z-10 flex flex-col sm:flex-row gap-3 sm:right-10">
@@ -133,12 +169,6 @@ export default function Spotlight() {
             Meet Me
           </button>
         )}
-
-        {/* Schedule a Call Button */}
-        {/* <button className="flex items-center justify-center gap-2 rounded-full bg-blue-500 px-6 py-4 font-medium text-white shadow-lg shadow-blue-500/30 transition hover:bg-blue-600">
-          <Calendar size={18} />
-          Schedule a Call
-        </button> */}
       </div>
     </section>
   );

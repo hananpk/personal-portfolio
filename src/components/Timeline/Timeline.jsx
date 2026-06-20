@@ -3,6 +3,7 @@
 import { motion, useInView, animate } from "framer-motion";
 import { useRef, useEffect } from "react";
 import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
+import Link from "next/link";
 
 const checkpoints = [
   {
@@ -246,6 +247,15 @@ export default function Timeline() {
             })}
           </div>
         </div>
+      </div>
+      <div className="flex justify-center mt-20">
+        {" "}
+        <Link
+          href="/timeline"
+          className="border border-blue-700 hover:bg-blue-700 text-white text-sm py-4 px-6 rounded-full"
+        >
+          Read my full story
+        </Link>
       </div>
     </div>
   );
