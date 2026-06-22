@@ -11,7 +11,7 @@ const chapters = [
   {
     id: "tegain",
     date: "Aug 2022 — May 2023",
-    role: "Frontend Engineer",
+    role: "Frontend Developer",
     company: "Tegain Pvt Ltd",
     location: "Kochi, India",
     summary:
@@ -22,7 +22,7 @@ const chapters = [
   {
     id: "webandcrafts",
     date: "Aug 2023 — Sep 2024",
-    role: "Frontend Engineer",
+    role: "Software Engineer",
     company: "Webandcrafts",
     location: "Thrissur, India",
     summary:

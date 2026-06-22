@@ -8,13 +8,13 @@ import Link from "next/link";
 const checkpoints = [
   {
     date: "Aug 2022",
-    role: "Frontend Engineer",
+    role: "Frontend Developer",
     company: "Tegain Pvt Ltd",
     location: "Kochi, India",
   },
   {
     date: "Aug 2023",
-    role: "Frontend Engineer",
+    role: "Software Engineer",
     company: "Webandcrafts",
     location: "Thrissur, India",
   },

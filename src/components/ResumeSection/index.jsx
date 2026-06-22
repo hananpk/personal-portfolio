@@ -38,7 +38,7 @@ const ResumeSection = () => {
 
           <div className="relative">
             <motion.a
-              href="/assets/resume/Hanan_Software_Engineer_Resume.pdf"
+              href="/assets/resume/Hanan_Full_Stack_Engineer_Resume.pdf"
               download="Hanan_Resume.pdf"
               whileHover="hover"
               whileTap="tap"
