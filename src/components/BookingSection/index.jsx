@@ -56,7 +56,7 @@ const BookingSection = () => {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               onClick={() => setIsOpen(true)}
-              className="group flex items-center gap-4 bg-white px-8 py-5 rounded-full text-md transition-all hover:bg-blue-600 hover:text-white"
+              className="group flex items-center gap-4 bg-white px-8 py-5 rounded-full text-md transition-all hover:bg-blue-600 hover:text-white text-sm"
             >
               Schedule a Call
               <FiArrowUpRight className="text-xl group-hover:rotate-45 transition-transform" />
