@@ -17,7 +17,7 @@ const WorkSection = () => {
     >
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/5 blur-[120px] rounded-full pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 lg:px-16">
         <div className="lg:col-span-5 space-y-12">
           <div>
             <motion.h2

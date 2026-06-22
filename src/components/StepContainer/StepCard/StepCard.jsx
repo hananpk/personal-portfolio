@@ -39,7 +39,7 @@ const StepCard = (props) => {
     <div ref={container} className={`${Style.card_container} card`}>
       <motion.div
         className={`${Style.card} ${Style[className]} border border-white/5`}
-        style={{ scale, opacity, top: `calc(-5vh + ${i * 25}px)` }}
+        style={{ scale, top: `calc(-5vh + ${i * 25}px)` }}
       >
         <div className="">
           <div className="rounded-[2.4rem]">
@@ -49,7 +49,7 @@ const StepCard = (props) => {
                 <h3 className="text-xl md:text-2xl font-bold text-white uppercase tracking-tighter">
                   {name}
                 </h3>
-                <p className="text-zinc-500 leading-relaxed font-thin">
+                <p className="text-zinc-500 leading-relaxed font-thin text-sm md:text-base">
                   {description}
                 </p>
               </div>
@@ -58,7 +58,7 @@ const StepCard = (props) => {
                 {tools.map((tool, index) => (
                   <span
                     key={index}
-                    className="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-xs font-medium text-zinc-300 group-hover:border-white/20 transition-colors"
+                    className="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-[11px] md:text-xs font-medium text-zinc-300 group-hover:border-white/20 transition-colors"
                   >
                     {tool}
                   </span>

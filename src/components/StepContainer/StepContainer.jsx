@@ -15,8 +15,8 @@ const StepContainer = () => {
 
   return (
     <section id="skills" className="relative bg-black w-full" ref={container}>
-      <div className="container mx-auto flex flex-col lg:flex-row items-start gap-10 px-12">
-        <div className="relative md:sticky top-0 h-auto md:h-screen flex flex-col justify-start md:justify-center py-12 md:py-20 w-full lg:w-1/3">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start gap-10 px-4 md:px-12 lg:px-16">
+        <div className="relative md:sticky top-0 h-auto md:h-screen flex flex-col justify-start md:justify-center py-12 md:py-20 w-full lg:w-1/3 pl-4 md:pl-10 lg:pl-0">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
