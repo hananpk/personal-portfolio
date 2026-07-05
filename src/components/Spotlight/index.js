@@ -139,7 +139,7 @@ export default function Spotlight() {
           variants={itemVariants}
           className="mt-4 max-w-md text-lg text-white/70"
         >
-          AI Software Engineer
+          Software Engineer
         </motion.p>
 
         {/* Stats */}
@@ -160,7 +160,7 @@ export default function Spotlight() {
             },
             {
               value: "2",
-              label: "Products Shipped",
+              label: "SaaS Shipped",
               icon: <Rocket size={24} />,
             },
           ].map((stat) => (
